@@ -1,0 +1,9 @@
+{
+  "id": "example-mcp",
+  "name": "Example MCP Server",
+  "endpoint": "http://localhost:8000/mcp",
+  "auth": {
+    "type": "app-token",
+    "appToken": "your-app-token-here"
+  }
+}

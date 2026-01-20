@@ -1,0 +1,16 @@
+{
+  "id": "oauth2-mcp",
+  "name": "OAuth2 MCP Server",
+  "endpoint": "http://localhost:8001/mcp",
+  "auth": {
+    "type": "oauth2",
+    "oauth2": {
+      "clientId": "your-client-id",
+      "clientSecret": "your-client-secret",
+      "tokenUrl": "https://auth.example.com/oauth/token",
+      "accessToken": "initial-access-token",
+      "refreshToken": "initial-refresh-token",
+      "expiresAt": 1234567890000
+    }
+  }
+}
