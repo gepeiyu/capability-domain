@@ -1,6 +1,9 @@
 # Capability-Domain
+Capability-Domain：AI Agent 的能力中枢与统一网关
 
-一个基于 Node.js 的能力网关（Sidecar），将本地的 Claude Skills 与远程的 MCP Tools 统一抽象为"原子能力"，通过 API 和 Unix Domain Socket (UDS) 为上层 Agent 提供动态的能力 Metadata 和执行接口。
+在构建功能强大的 AI Agent 时，集成多样化的工具（如本地脚本、云端服务或模型上下文协议工具）常面临协议不一、管理复杂与上下文臃肿的挑战。Capability-Domain 正是为此而生的解决方案。
+
+它是一个轻量级的能力网关（Sidecar），运行在您的 Agent 之侧。其核心使命是将分散的、异构的能力——无论是本地的 Claude Skills，还是通过 Model Context Protocol (MCP) 接入的远程工具——统一抽象为标准的“原子能力”。通过简洁的 API 与 Unix Domain Socket，它为上层 Agent 提供了一个动态、可发现且高效的能力调用层，让 Agent 能够按需发现、理解并执行数百种功能，而无需关心底层的实现细节与集成复杂度。
 
 ## 特性
 

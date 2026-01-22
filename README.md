@@ -1,6 +1,10 @@
 # Capability-Domain
 
-A Node.js-based capability gateway (Sidecar) that unifies local Claude Skills and remote MCP Tools into "atomic capabilities", providing dynamic capability metadata and execution interfaces via API and Unix Domain Socket (UDS) for upper-layer Agents.
+Capability-Domain: The Capability Hub and Unified Gateway for AI Agents
+
+When building powerful AI Agents, integrating diverse tools (such as local scripts, cloud services, or Model Context Protocol tools) often faces challenges like inconsistent protocols, complex management, and bloated contexts. Capability-Domain is the solution designed for this.
+
+It is a lightweight capability gateway (Sidecar) that runs alongside your Agent. Its core mission is to unify scattered, heterogeneous capabilities—whether local Claude Skills or remote tools accessed via Model Context Protocol (MCP)—into standard "atomic capabilities". Through a simple API and Unix Domain Socket, it provides a dynamic, discoverable, and efficient capability invocation layer for upper-layer Agents, enabling Agents to discover, understand, and execute hundreds of functions on-demand without worrying about underlying implementation details and integration complexity.
 
 ## Features
 
@@ -125,22 +129,6 @@ Health check endpoint that returns service status and statistics.
 
 Lists all generated files.
 
-**Response Example:**
-
-```json
-{
-  "success": true,
-  "files": [
-    {
-      "name": "hello.pdf",
-      "size": 12345,
-      "created": "2026-01-22T00:15:30.000Z",
-      "downloadUrl": "/download/hello.pdf"
-    }
-  ]
-}
-```
-
 ### GET /download/:filename
 
 Downloads generated files.
@@ -169,11 +157,7 @@ Refreshes all capability metadata.
 
 Call `GET /metadata` to retrieve a Markdown-formatted list of all available capabilities:
 
-```bash
-curl http://localhost:5271/metadata
-```
-
-The returned content can be directly placed in LLM context to help the LLM understand available capabilities.
+The returned content can be directly placed in LLM context to help LLM understand available capabilities.
 
 ### 2. Get Capability Details
 
